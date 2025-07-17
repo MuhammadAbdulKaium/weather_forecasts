@@ -2,6 +2,7 @@ import 'package:flutter/cupertino.dart';
 
 class GradientBackground extends StatelessWidget {
   final Widget child;
+
   const GradientBackground({super.key, required this.child});
 
   @override
@@ -12,10 +13,12 @@ class GradientBackground extends StatelessWidget {
           begin: Alignment.topCenter,
           end: Alignment.bottomCenter,
           colors: [
-            Color(0xFF182140), // Top color (dark blue/purple)
-            Color(0xFF9739ab), // Bottom color (light purple/pink)
-          ]
-        )
+            Color(0xFF182140),
+            Color(0xFF5742a1),
+            Color(0xFF8e4aac),
+          ],
+          stops: [0.005, 0.71, 1.0],
+        ),
       ),
       child: child,
     );
