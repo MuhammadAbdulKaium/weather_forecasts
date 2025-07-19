@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:weather_forecasts/gradient_background.dart';
+import 'package:get/get.dart';
+import 'package:weather_forecasts/custom_widgets/gradient_background.dart';
 import 'package:weather_forecasts/theme/app_text_style.dart';
 
 class HomePage extends StatelessWidget {
@@ -17,17 +18,14 @@ class HomePage extends StatelessWidget {
               Expanded(
                 flex: 23,
                 child: SizedBox(
-                  // height: screenHeight * 0.1,
                   child: Image.asset(
-                    'assets/images/cloudy.png',
-                    // fit: BoxFit.cover,
+                    'assets/images/rain.png',
                   ),
                 ),
               ),
               Expanded(
                 flex: 18,
                 child: Column(
-                  // mainAxisAlignment: MainAxisAlignment.start,
                   children: [
                     Flexible(
                       flex: 6,
@@ -40,7 +38,6 @@ class HomePage extends StatelessWidget {
                         ],
                       ),
                     ),
-                    // SizedBox(height: screenHeight * 0.055,),
                     Flexible(
                       flex: 6,
                       fit: FlexFit.loose,
@@ -58,7 +55,10 @@ class HomePage extends StatelessWidget {
                                   style: ElevatedButton.styleFrom(
                                     backgroundColor: Color(0xFFDDB130)
                                   ),
-                                  onPressed: () {},
+                                  onPressed: () {
+                                    Get.back();
+                                    Get.toNamed('/weather_details_page');
+                                  },
                                   child: Text(
                                     'Get Start',
                                     style: AppTextStyle.textStyle28c362A84w700,
@@ -70,7 +70,6 @@ class HomePage extends StatelessWidget {
                         ),
                       ),
                     ),
-                    // SizedBox(height: screenHeight * 0.065,),
                   ],
                 ),
               ),
